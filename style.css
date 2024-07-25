@@ -1,3 +1,51 @@
+@font-face {
+  font-family: "League Spartan";
+  font-weight: 100;
+  src: url("./assets/fonts/LeagueSpartan-100-Thin.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: 200;
+  src: url("./assets/fonts/LeagueSpartan-200-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: lighter;
+  src: url("./assets/fonts/LeagueSpartan-300-Light.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: normal;
+  src: url("./assets/fonts/LeagueSpartan-400-Regular.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: 500;
+  src: url("./assets/fonts/LeagueSpartan-500-Medium.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: bolder;
+  src: url("./assets/fonts/LeagueSpartan-600-SemiBold.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: bold;
+  src: url("./assets/fonts/LeagueSpartan-700-Bold.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: 800;
+  src: url("./assets/fonts/LeagueSpartan-800-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "League Spartan";
+  font-weight: 900;
+  src: url("./assets/fonts/LeagueSpartan-900-Black.ttf");
+}
+html {
+  font-family: "League Spartan";
+}
 html * {
   margin: 0;
 }
@@ -14,6 +62,9 @@ html main img {
 }
 html main .d-flex {
   display: flex;
+}
+html main .d-grid {
+  display: grid;
 }
 
 /*# sourceMappingURL=style.css.map */

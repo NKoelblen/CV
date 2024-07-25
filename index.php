@@ -20,7 +20,7 @@ $iconPath = './assets/images/icons';
 <body>
     <main>
 
-        <header>
+        <header class="d-flex">
             <div>
                 <p>Noémie Koelblen</p>
                 <h1>Développeuse PHP | Symfony</h1>
