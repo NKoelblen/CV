@@ -2,162 +2,162 @@
 $technos = [
     [
         'title' => 'MySQL',
-        'icon' => '',
+        'icon' => 'mysql.png',
         'type' => 'langage'
     ],
     [
         'title' => 'PHP',
-        'icon' => '',
+        'icon' => 'php.svg',
         'type' => 'langage'
     ],
     [
         'title' => 'Symfony',
-        'icon' => '',
+        'icon' => 'symfony.svg',
         'type' => 'langage'
     ],
     [
         'title' => 'Laravel',
-        'icon' => '',
+        'icon' => 'laravel.png',
         'type' => 'langage'
     ],
     [
         'title' => 'HTML',
-        'icon' => '',
+        'icon' => 'html.png',
         'type' => 'langage'
     ],
     [
         'title' => 'Twig',
-        'icon' => '',
+        'icon' => 'twig.svg',
         'type' => 'langage'
     ],
     [
         'title' => 'CSS',
-        'icon' => '',
+        'icon' => 'css.svg',
         'type' => 'langage'
     ],
     [
         'title' => 'Sass',
-        'icon' => '',
+        'icon' => 'sass.svg',
         'type' => 'langage'
     ],
     [
         'title' => 'Bootstrap',
-        'icon' => '',
+        'icon' => 'bootstrap.png',
         'type' => 'langage'
     ],
     [
         'title' => 'JavaScript',
-        'icon' => '',
+        'icon' => 'javascript.svg',
         'type' => 'langage'
     ],
     [
         'title' => 'Wordpress',
-        'icon' => '',
+        'icon' => 'wordpress.svg',
         'type' => 'langage'
     ],
     [
         'title' => 'Ubuntu',
-        'icon' => '',
+        'icon' => 'ubuntu.svg',
         'type' => 'environnement'
     ],
     [
         'title' => 'VSCode',
-        'icon' => '',
+        'icon' => 'vscode.svg',
         'type' => 'environnement'
     ],
     [
         'title' => 'Docker',
-        'icon' => '',
+        'icon' => 'docker.svg',
         'type' => 'environnement'
     ],
     [
         'title' => 'Postman',
-        'icon' => '',
+        'icon' => 'postman.svg',
         'type' => 'environnement'
     ],
     [
         'title' => 'Git',
-        'icon' => '',
+        'icon' => 'git.png',
         'type' => 'environnement'
     ],
     [
         'title' => 'GitHub',
-        'icon' => '',
+        'icon' => 'github.png',
         'type' => 'environnement'
     ],
     [
         'title' => 'Figma',
-        'icon' => '',
+        'icon' => 'figma.svg',
         'type' => 'tool'
     ],
     [
         'title' => 'Illustrator',
-        'icon' => '',
+        'icon' => 'illustrator.png',
         'type' => 'tool'
     ],
     [
         'title' => 'Indesign',
-        'icon' => '',
+        'icon' => 'indesign.png',
         'type' => 'tool'
     ],
     [
         'title' => 'Asana',
-        'icon' => '',
+        'icon' => 'asana.webp',
         'type' => 'tool'
     ],
     [
         'title' => 'Notion',
-        'icon' => '',
+        'icon' => 'notion.png',
         'type' => 'tool'
     ],
     [
         'title' => 'OVH',
-        'icon' => '',
+        'icon' => 'ovh.png',
         'type' => 'other'
     ],
     [
         'title' => 'Doctrine',
-        'icon' => '',
+        'icon' => 'doctrine.svg',
         'type' => 'other'
     ],
     [
         'title' => 'Spotify API',
-        'icon' => '',
+        'icon' => 'spotify.png',
         'type' => 'other'
     ],
     [
         'title' => 'JQuery',
-        'icon' => '',
+        'icon' => 'jquery.svg',
         'type' => 'other'
     ],
     [
         'title' => 'Leaflet JS',
-        'icon' => '',
+        'icon' => 'leaflet-js.png',
         'type' => 'other'
     ],
     [
         'title' => 'Yoast SEO',
-        'icon' => '',
+        'icon' => 'yoast-seo.png',
         'type' => 'other'
     ],
     [
         'title' => 'Google Analytics',
-        'icon' => '',
+        'icon' => 'google-analytics.png',
         'type' => 'other'
     ],
     [
         'title' => 'O2Switch',
-        'icon' => '',
+        'icon' => 'O2Switch.svg',
         'type' => 'other'
     ],
     [
         'title' => 'PHPStan',
-        'icon' => '',
+        'icon' => 'phpstan.png',
         'type' => 'other'
     ],
     [
         'title' => 'PHPUnit',
-        'icon' => '',
+        'icon' => 'phpunit.webp',
         'type' => 'other'
     ],
 ];
