@@ -16,11 +16,6 @@ $technos = [
         'type' => 'langage'
     ],
     [
-        'title' => 'Laravel',
-        'icon' => 'laravel.png',
-        'type' => 'langage'
-    ],
-    [
         'title' => 'HTML',
         'icon' => 'html.png',
         'type' => 'langage'
@@ -110,6 +105,17 @@ $technos = [
         'icon' => 'notion.png',
         'type' => 'tool'
     ],
+    [
+        'title' => 'Laravel',
+        'icon' => 'laravel.png',
+        'type' => 'learning'
+    ],
+    [
+        'title' => 'React',
+        'icon' => 'react.png',
+        'type' => 'learning'
+    ],
+
     [
         'title' => 'OVH',
         'icon' => 'ovh.png',

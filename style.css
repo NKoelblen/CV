@@ -1,19 +1,18 @@
-body {
+html * {
+  margin: 0;
+}
+html main {
   width: 21cm;
   height: 29.7cm;
-  margin: 0;
   overflow: hidden;
 }
-body * {
-  margin: 0;
-}
-body img {
+html main img {
   width: 32px;
   height: 32px;
   object-fit: contain;
   object-position: center;
 }
-body main {
+html main .d-flex {
   display: flex;
 }
 
