@@ -56,13 +56,13 @@ $technos = [
         'type' => 'environnement'
     ],
     [
-        'title' => 'VSCode',
-        'icon' => 'vscode.svg',
+        'title' => 'Docker',
+        'icon' => 'docker.svg',
         'type' => 'environnement'
     ],
     [
-        'title' => 'Docker',
-        'icon' => 'docker.svg',
+        'title' => 'VSCode',
+        'icon' => 'vscode.svg',
         'type' => 'environnement'
     ],
     [
@@ -80,6 +80,17 @@ $technos = [
         'icon' => 'github.png',
         'type' => 'environnement'
     ],
+    [
+        'title' => 'PHPUnit',
+        'icon' => 'phpunit.webp',
+        'type' => 'environnement'
+    ],
+    [
+        'title' => 'PHPStan',
+        'icon' => 'phpstan.png',
+        'type' => 'environnement'
+    ],
+
     [
         'title' => 'Figma',
         'icon' => 'figma.svg',
@@ -127,11 +138,6 @@ $technos = [
         'type' => 'other'
     ],
     [
-        'title' => 'Spotify API',
-        'icon' => 'spotify.png',
-        'type' => 'other'
-    ],
-    [
         'title' => 'JQuery',
         'icon' => 'jquery.svg',
         'type' => 'other'
@@ -153,17 +159,7 @@ $technos = [
     ],
     [
         'title' => 'O2Switch',
-        'icon' => 'O2Switch.svg',
-        'type' => 'other'
-    ],
-    [
-        'title' => 'PHPStan',
-        'icon' => 'phpstan.png',
-        'type' => 'other'
-    ],
-    [
-        'title' => 'PHPUnit',
-        'icon' => 'phpunit.webp',
+        'icon' => 'o2switch.svg',
         'type' => 'other'
     ],
 ];

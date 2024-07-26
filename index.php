@@ -1,7 +1,6 @@
 <?php
 require_once './technos.php';
 require_once './experiences.php';
-require_once './practices.php';
 require_once './functions.php';
 
 $iconPath = './assets/images/icons';
@@ -20,55 +19,56 @@ $iconPath = './assets/images/icons';
 <body>
     <main>
 
-        <header class="d-flex">
-            <div>
-                <p>Noémie Koelblen</p>
+        <header class="d-flex justify-end">
+            <div id="title">
+                <p id="name" class="uppercase p-b-05">Noémie Koelblen</p>
                 <h1>Développeuse PHP | Symfony</h1>
             </div>
-            <img src="./assets/images/avatar.jpg">
+            <img id="avatar" src="./assets/images/avatar.jpg">
         </header>
 
         <div class="d-flex">
-            <aside>
+            <aside class="d-flex column justify-between col-4">
                 <section>
-                    <h2>Compétences</h2>
+                    <h2 class="p-t-1">Compétences</h2>
                     <div>
-                        <h3>Je parle...</h3>
+                        <h3 class="medium p-t-1 p-b-05">Je parle...</h3>
                         <?= display_technos($technos, 'langage', $iconPath); ?>
                     </div>
                     <div>
-                        <h3>J'utilise...</h3>
+                        <h3 class="medium p-t-1">J'utilise...</h3>
                         <div>
-                            <h4>Environnement</h4>
+                            <h4 class="light p-v-05">Environnement</h4>
                             <?= display_technos($technos, 'environnement', $iconPath); ?>
                         </div>
                         <div>
-                            <h4>Outils</h4>
+                            <h4 class="light p-v-05">Outils</h4>
                             <?= display_technos($technos, 'tool', $iconPath); ?>
                         </div>
                     </div>
+
                     <div>
-                        <h3>J'apprends...</h3>
+                        <h3 class="medium p-t-1 p-b-05">J'apprends...</h3>
                         <?= display_technos($technos, 'learning', $iconPath); ?>
                     </div>
                 </section>
 
                 <section>
-                    <h2>Formations</h2>
-                    <div>
-                        <span>2023-2024 | </span>
-                        <h3>Développement Web</h3>
+                    <h2 class="p-t-1">Formations</h2>
+                    <div class="d-flex wrap p-t-1">
+                        <span>2023-2024 |&#xA0;</span>
+                        <h3 class="medium">Développement Web</h3>
                         <p>→ Titre professionnel Niveau V</p>
                     </div>
-                    <div>
-                        <span>2008-2009 | </span>
-                        <h3>Arts Appliqués</h3>
+                    <div class="d-flex wrap p-t-1">
+                        <span>2008-2009 |&#xA0;</span>
+                        <h3 class="medium">Arts Appliqués</h3>
                     </div>
                 </section>
 
                 <section>
-                    <h2>Intérêts</h2>
-                    <ul>
+                    <h2 class="p-t-1">Intérêts</h2>
+                    <ul class="d-flex wrap gap-h-15 marker-none">
                         <li>Arts martiaux</li>
                         <li>Dessin</li>
                         <li>Photographie</li>
@@ -81,79 +81,69 @@ $iconPath = './assets/images/icons';
 
             </aside>
 
-            <section>
-                <h2>Expériences</h2>
+            <section id="experiences" class="col-8">
+                <h2 class="p-t-1">Expériences</h2>
                 <div>
-                    <h3>J'ai réalisé...</h3>
+                    <h3 class="medium p-t-1">J'ai réalisé...</h3>
 
                     <?php foreach ($experiences as $experience): ?>
                         <article>
-                            <header>
-                                <span><?= $experience['years'] ?> | </span>
-                                <h3><?= $experience['title'] ?></h3>
-                                <a href="https://<?= $experience['link'] ?>"><?= $experience['link'] ?></a>
+                            <header class="d-flex p-t-1">
+                                <span><?= $experience['years'] ?> |&#xA0;</span>
+                                <h4 class="medium"><?= $experience['title'] ?></h4>
+                                <a href="https://<?= $experience['link'] ?>">&#xA0;→ <?= $experience['link'] ?></a>
                             </header>
-                            <p>{ <?= $experience['description'] ?> }</p>
-                            <ul>
-                                <?php foreach ($experience['tasks'] as $task): ?>
-                                    <li><?= $task ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                            <ul>
-                                <?php foreach ($experience['stack'] as $stack):
-                                    foreach ($technos as $techno):
-                                        if ($stack === $techno['title']): ?>
-                                            <li>
-                                                <img src="<?= $iconPath . '\\' . $techno['icon'] ?>">
-                                                <p><?= $techno['title'] ?></p>
-                                            </li>
-                                        <?php endif;
-                                    endforeach;
-                                endforeach; ?>
-                            </ul>
+                            <p>{ <i><?= $experience['description'] ?></i> }</p>
+                            <div class="d-flex">
+                                <ul class="col-6">
+                                    <?php foreach ($experience['tasks'] as $task): ?>
+                                        <li><?= $task ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                                <ul class="d-flex wrap marker-none col-6 gap-v-075">
+                                    <?php foreach ($experience['stack'] as $stack):
+                                        foreach ($technos as $techno):
+                                            if ($stack === $techno['title']): ?>
+                                                <li class="d-flex column align-center col-3 gap-025">
+                                                    <img src="<?= $iconPath . '\\' . $techno['icon'] ?>">
+                                                    <p class="center"><?= $techno['title'] ?></p>
+                                                </li>
+                                            <?php endif;
+                                        endforeach;
+                                    endforeach; ?>
+                                </ul>
+                            </div>
                         </article>
                     <?php endforeach; ?>
                 </div>
 
                 <div>
-                    <h2>Je pratique...</h2>
-                    <ul>
-                        <li>Méthodologie Agile</li>
-                        <li>Installation WSL</li>
-                        <li>Configuation de containers d'applications</li>
-                        <li>Versionning des applicatifs</li>
-                        <li>Tests unitaires</li>
-                        <li>Audit de qualité de code</li>
-                        <li>CI/CD</li>
-                        <li>Monitoring et maintenance des applicatifs</li>
-                        <li>Veille informationnelle</li>
-                    </ul>
-                    <ul>
-                        <?php foreach ($practices as $practice):
-                            foreach ($technos as $techno):
-                                if ($practice === $techno['title']): ?>
-                                    <li>
-                                        <img src="<?= $iconPath . '\\' . $techno['icon'] ?>">
-                                        <p><?= $techno['title'] ?></p>
-                                    </li>
-                                <?php endif;
-                            endforeach;
-                        endforeach; ?>
+                    <h3 class="medium p-t-1 p-b-05">Je pratique...</h3>
+                    <ul class="d-flex wrap gap-h-15 marker-none">
+                        <li>Méthodologie <strong>Agile</strong></li>
+                        <li>Installation <strong>WSL</strong></li>
+                        <li>Configuation de <strong>containers d'applications</strong></li>
+                        <li><strong>Versionning</strong> des applicatifs</li>
+                        <li><strong>Tests</strong> unitaires</li>
+                        <li><strong>Audit</strong> de qualité de code</li>
+                        <li><strong>CI/CD</strong></li>
+                        <li><strong>Monitoring</strong> & <strong>Maintenance</strong> des applicatifs</li>
+                        <li><strong>Veille</strong> informationnelle</li>
                     </ul>
                 </div>
             </section>
         </div>
 
-        <footer>
-            <div>
+        <footer class="d-flex">
+            <div class="d-flex column col-4">
                 <p>63260 Chaptuzat</p>
                 <p>Permis B véhiculé</p>
             </div>
-            <div>
+            <div class="d-flex column col-4">
                 <a href="mailto:hello@onoko.dev" target="_blank">hello@onoko.dev</a>
                 <a href="tel:0632077408">06.32.07.74.08</a>
             </div>
-            <div>
+            <div class="d-flex column col-4">
                 <a href="https://onoko.dev/" target="_blank">onoko.dev</a>
                 <a href="https://github.com/NKoelblen" target="_blank">NKoelblen</a>
                 <a href="http://www.linkedin.com/in/no%C3%A9mie-koelblen" target="_blank">noémie-koelblen</a>
