@@ -47,7 +47,7 @@
 html {
 	font-family: 'League Spartan';
 	font-size: 12px;
-	line-height: 1.49;
+	line-height: 1.42;
 	font-weight: 300;
 	* {
 		margin: 0;
@@ -57,6 +57,8 @@ html {
 		height: 29.7cm;
 		overflow: hidden;
 		border: solid 1px red;
+
+		// HEADER
 		header {
 			text-align: end;
 			#name {
@@ -67,6 +69,8 @@ html {
 				height: 9rem;
 			}
 		}
+
+		// TITLES
 		h1,
 		h2,
 		h3,
@@ -87,6 +91,8 @@ html {
 		h3 {
 			font-size: 1rem;
 		}
+
+		// FONT WEIGHT
 		.thin {
 			font-weight: 100;
 		}
@@ -115,9 +121,13 @@ html {
 		.black {
 			font-weight: 900;
 		}
+
+		// TEXT ALIGN
 		.center {
 			text-align: center;
 		}
+
+		// ELEMENTS
 		ul {
 			padding-inline-start: 2em;
 			&.marker-none {
@@ -131,6 +141,24 @@ html {
 			object-fit: contain;
 			object-position: center;
 		}
+
+		// WIDTH
+		.col {
+			&-3 {
+				width: 25%;
+			}
+			&-4 {
+				width: calc(100% / 3);
+			}
+			&-6 {
+				width: 50%;
+			}
+			&-8 {
+				width: calc(100% / 3 * 2);
+			}
+		}
+
+		// PADDING
 		.p {
 			&-t-1,
 			&-v-1 {
@@ -148,81 +176,6 @@ html {
 				padding-bottom: 1em;
 			}
 		}
-		.d-flex {
-			display: flex;
-			&.wrap {
-				flex-wrap: wrap;
-			}
-			&.column {
-				flex-direction: column;
-			}
-			&.align {
-				&-center {
-					align-items: center;
-				}
-				&-end {
-					align-items: end;
-				}
-			}
-			&.justify {
-				&-between {
-					justify-content: space-between;
-				}
-				&-end {
-					justify-content: end;
-				}
-			}
-			&.gap {
-				&-h {
-					&-05 {
-						column-gap: 0.5rem;
-					}
-					&-1 {
-						column-gap: 1rem;
-					}
-					&-15 {
-						column-gap: 1.5rem;
-					}
-				}
-				&-v {
-					&-05 {
-						row-gap: 0.5rem;
-					}
-					&-075 {
-						row-gap: 0.75rem;
-					}
-					&-1 {
-						row-gap: 1rem;
-					}
-				}
-				&-025 {
-					gap: 0.25rem;
-				}
-				&-05 {
-					gap: 0.5rem;
-				}
-				&-1 {
-					gap: 1rem;
-				}
-			}
-		}
-		.col {
-			&-2 {
-				width: calc(100% / 6);
-			}
-			&-3 {
-				width: 25%;
-			}
-			&-4 {
-				width: calc(100% / 3);
-			}
-			&-6 {
-				width: 50%;
-			}
-			&-8 {
-				width: calc(100% / 3 * 2);
-			}
-		}
 		#title {
 			padding: 3rem 1rem 0 1rem;
 		}
@@ -233,8 +186,52 @@ html {
 			padding: 0 2rem 1rem 1rem;
 		}
 		footer {
-			padding: 1rem 1rem 1rem 2rem;
-			border: solid 1px blue;
+			padding: 1rem 2rem 2rem 2rem;
+		}
+
+		//BORDERS
+		.border-bottom {
+			border-bottom: solid 1px;
+			border-image: linear-gradient(to right, black, white) 1;
+		}
+	}
+
+	// FLEXBOX
+	.d-flex {
+		display: flex;
+		&.wrap {
+			flex-wrap: wrap;
+		}
+		&.column {
+			flex-direction: column;
+		}
+		&.align {
+			&-center {
+				align-items: center;
+			}
+		}
+		&.justify {
+			&-between {
+				justify-content: space-between;
+			}
+			&-end {
+				justify-content: end;
+			}
+		}
+		&.gap {
+			&-h {
+				&-15 {
+					column-gap: 1.5rem;
+				}
+			}
+			&-v {
+				&-075 {
+					row-gap: 0.75rem;
+				}
+			}
+			&-025 {
+				gap: 0.25rem;
+			}
 		}
 	}
 }

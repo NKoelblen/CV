@@ -17,9 +17,9 @@ $iconPath = './assets/images/icons';
 </head>
 
 <body>
-    <main>
+    <main class="d-flex column justify-between">
 
-        <header class="d-flex justify-end">
+        <header class="d-flex justify-end border-bottom">
             <div id="title">
                 <p id="name" class="uppercase p-b-05">Noémie Koelblen</p>
                 <h1>Développeuse PHP | Symfony</h1>
@@ -81,13 +81,13 @@ $iconPath = './assets/images/icons';
 
             </aside>
 
-            <section id="experiences" class="col-8">
+            <section id="experiences" class="d-flex column justify-between col-8">
                 <h2 class="p-t-1">Expériences</h2>
                 <div>
                     <h3 class="medium p-t-1">J'ai réalisé...</h3>
 
                     <?php foreach ($experiences as $experience): ?>
-                        <article>
+                        <article class="border-bottom p-b-05">
                             <header class="d-flex p-t-1">
                                 <span><?= $experience['years'] ?> |&#xA0;</span>
                                 <h4 class="medium"><?= $experience['title'] ?></h4>
