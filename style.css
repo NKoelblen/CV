@@ -62,6 +62,7 @@ html main {
   width: 21cm;
   height: 29.7cm;
   overflow: hidden;
+  margin: auto;
 }
 html main header {
   text-align: end;
