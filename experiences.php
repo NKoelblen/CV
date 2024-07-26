@@ -42,7 +42,7 @@ $experiences = [
         'years' => '2024',
         'title' => 'Théâtre du Lyon',
         'link' => 'onoko.dev/projects/theatre-du-lyon',
-        'description' => 'Création from scratch du site Web dune Compagnie de théâtre',
+        'description' => 'Création from scratch du site Web d\'une Compagnie de théâtre',
         'tasks' => [
             '<strong>Revue de code</strong>',
             'Développement <strong>Front-end</strong> & <strong>Back-end</strong> { <i>Wordpress</i> | <i>Bootstrap</i> }',
