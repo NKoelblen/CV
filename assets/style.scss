@@ -47,7 +47,7 @@
 html {
 	font-family: 'League Spartan';
 	font-size: 12px;
-	line-height: 1.42;
+	line-height: 1.36;
 	font-weight: 300;
 	* {
 		margin: 0;
@@ -128,6 +128,10 @@ html {
 		}
 
 		// ELEMENTS
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 		ul {
 			padding-inline-start: 2em;
 			&.marker-none {
@@ -144,6 +148,9 @@ html {
 
 		// WIDTH
 		.col {
+			&-2 {
+				width: calc(100% / 6);
+			}
 			&-3 {
 				width: 25%;
 			}
@@ -156,6 +163,9 @@ html {
 			&-8 {
 				width: calc(100% / 3 * 2);
 			}
+		}
+		.task {
+			column-count: 2;
 		}
 
 		// PADDING
@@ -187,6 +197,7 @@ html {
 		}
 		footer {
 			padding: 1rem 2rem 2rem 2rem;
+			border: solid 1px blue;
 		}
 
 		//BORDERS
@@ -213,6 +224,9 @@ html {
 		&.justify {
 			&-between {
 				justify-content: space-between;
+			}
+			&-center {
+				justify-content: center;
 			}
 			&-end {
 				justify-content: end;

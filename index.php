@@ -93,24 +93,12 @@ $iconPath = './assets/images/icons';
                                 <h4 class="medium"><?= $experience['title'] ?></h4>
                                 <a href="https://<?= $experience['link'] ?>">&#xA0;→ <?= $experience['link'] ?></a>
                             </header>
-                            <p>{ <i><?= $experience['description'] ?></i> }</p>
+                            <p class="p-b-05">{ <i><?= $experience['description'] ?></i> }</p>
                             <div class="d-flex">
-                                <ul class="col-6">
+                                <ul>
                                     <?php foreach ($experience['tasks'] as $task): ?>
                                         <li><?= $task ?></li>
                                     <?php endforeach; ?>
-                                </ul>
-                                <ul class="d-flex wrap marker-none col-6 gap-v-075">
-                                    <?php foreach ($experience['stack'] as $stack):
-                                        foreach ($technos as $techno):
-                                            if ($stack === $techno['title']): ?>
-                                                <li class="d-flex column align-center col-3 gap-025">
-                                                    <img src="<?= $iconPath . '\\' . $techno['icon'] ?>">
-                                                    <p class="center"><?= $techno['title'] ?></p>
-                                                </li>
-                                            <?php endif;
-                                        endforeach;
-                                    endforeach; ?>
                                 </ul>
                             </div>
                         </article>
