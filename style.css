@@ -78,6 +78,7 @@ html main h1,
 html main h2,
 html main h3,
 html main h4,
+html main h5,
 html main .uppercase {
   text-transform: uppercase;
 }
@@ -92,6 +93,9 @@ html main h2 {
   letter-spacing: 0.2em;
 }
 html main h3 {
+  font-size: 1rem;
+}
+html main h5 {
   font-size: 1rem;
 }
 html main .thin {
@@ -167,7 +171,7 @@ html main .task {
 html main .p-t-1, html main .p-v-1 {
   padding-top: 1em;
 }
-html main .p-v-05 {
+html main .p-t-05, html main .p-v-05 {
   padding-top: 0.5em;
 }
 html main .p-b-05, html main .p-v-05 {
@@ -200,6 +204,10 @@ html main #experiences {
 html main #experiences a {
   color: #7f7f7f;
 }
+html main .border-top {
+  border-top: solid 1px;
+  border-image: linear-gradient(to right, var(--black), white) 1;
+}
 html main .border-bottom {
   border-bottom: solid 1px;
   border-image: linear-gradient(to right, var(--black), white) 1;
@@ -220,6 +228,9 @@ html .d-flex.column {
 }
 html .d-flex.align-center {
   align-items: center;
+}
+html .d-flex.align-end {
+  align-items: end;
 }
 html .d-flex.justify-between {
   justify-content: space-between;

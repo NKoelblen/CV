@@ -81,6 +81,7 @@ html {
 		h2,
 		h3,
 		h4,
+		h5,
 		.uppercase {
 			text-transform: uppercase;
 		}
@@ -95,6 +96,9 @@ html {
 			letter-spacing: 0.2em;
 		}
 		h3 {
+			font-size: 1rem;
+		}
+		h5 {
 			font-size: 1rem;
 		}
 
@@ -184,6 +188,7 @@ html {
 			&-v-1 {
 				padding-top: 1em;
 			}
+			&-t-05,
 			&-v-05 {
 				padding-top: 0.5em;
 			}
@@ -226,6 +231,10 @@ html {
 		}
 
 		//BORDERS
+		.border-top {
+			border-top: solid 1px;
+			border-image: linear-gradient(to right, var(--black), white) 1;
+		}
 		.border-bottom {
 			border-bottom: solid 1px;
 			border-image: linear-gradient(to right, var(--black), white) 1;
@@ -251,6 +260,9 @@ html {
 		&.align {
 			&-center {
 				align-items: center;
+			}
+			&-end {
+				align-items: end;
 			}
 		}
 		&.justify {

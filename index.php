@@ -55,12 +55,17 @@ $iconPath = './assets/images/icons';
 
                 <section>
                     <h2 class="p-t-1">Formations</h2>
-                    <div class="d-flex wrap p-t-1">
-                        <span>2023-2024 |&#xA0;</span>
+                    <div class="d-flex wrap p-t-05">
+                        <span>2015-2024 |&#xA0;</span>
                         <h3 class="medium">Développement Web</h3>
-                        <p>→ Titre professionnel Niveau V</p>
+                        <p>→ Autodidacte</p>
+                        <p>→ 2024 : Titre professionnel Niveau V</p>
                     </div>
-                    <div class="d-flex wrap p-t-1">
+                    <div class="d-flex wrap p-t-05">
+                        <span>2013-2015 |&#xA0;</span>
+                        <h3 class="medium">BTS Assistante de Manager</h3>
+                    </div>
+                    <div class="d-flex wrap p-t-05">
                         <span>2008-2009 |&#xA0;</span>
                         <h3 class="medium">Arts Appliqués</h3>
                     </div>
@@ -68,13 +73,13 @@ $iconPath = './assets/images/icons';
 
                 <section>
                     <h2 class="p-t-1">Intérêts</h2>
-                    <ul class="d-flex wrap gap-h-15 marker-none">
+                    <ul class="d-flex wrap gap-h-15">
                         <li>Arts martiaux</li>
-                        <li>Dessin</li>
-                        <li>Photographie</li>
-                        <li>Musique</li>
-                        <li>Cinéma</li>
                         <li>Beaux Arts</li>
+                        <li>Photographie</li>
+                        <li>Cinéma</li>
+                        <li>Musique</li>
+                        <li>Littérature</li>
                         <li>Voyages...</li>
                     </ul>
                 </section>
@@ -82,44 +87,88 @@ $iconPath = './assets/images/icons';
             </aside>
 
             <section id="experiences" class="d-flex column justify-between col-8">
-                <h2 class="p-t-1">Expériences</h2>
-                <div>
-                    <h3 class="medium p-t-1">J'ai réalisé...</h3>
 
-                    <?php foreach ($experiences as $experience): ?>
-                        <article class="border-bottom p-b-05">
-                            <header class="d-flex p-t-1">
-                                <span><?= $experience['years'] ?> |&#xA0;</span>
-                                <h4 class="medium"><?= $experience['title'] ?></h4>
-                                <a href="https://<?= $experience['link'] ?>">&#xA0;→ <?= $experience['link'] ?></a>
+                <p class="p-t-05">
+                    <!-- Naturellement <strong>curieuse</strong> et <strong>engagée</strong>, depuis plus d'une
+                    décénie de carrière, mes différents métiers m'ont permis d'acquérir l'<strong>autonomie</strong>, la
+                    <strong>rigueur</strong>
+                    et l'esprit d'<strong>équipe</strong>
+                    nécessaires au Développement Web. -->
+                    En complément de ce curriculum, je vous
+                    invite également à visiter <strong>mon portfolio</strong> : <a
+                        href="https://onoko.dev">onoko.dev</a>, <br> ainsi qu'à
+                    consulter mes résultats au <strong>test de
+                        personnalité</strong> AssessFirst : <a
+                        href="https://my.assessfirst.com/public/profile/pke14irg-noemie-koelblen?lang=fr-FR">my.assessfirst.com</a>.
+                </p>
+
+
+                <div class="p-t-05">
+                    <h2 class="">Expériences</h2>
+                    <h3 class="medium p-t-05 p-b-05">Je pratique...</h3>
+                    <ul id="practices" class="d-flex wrap gap-h-15">
+                        <li>Analyse des <strong>besoins clients</strong></li>
+                        <li>Gestion de <strong>Projet</strong></li>
+                        <li>Méthodologie <strong>Agile</strong></li>
+                        <li>Développement <strong>Back-end</strong></li>
+                        <li><strong>Intégration Front-end</strong></li>
+                        <li><strong>POO</strong> (Programmation Orientée Objet)</li>
+                        <li><strong>Revue</strong> de code</li>
+                        <li>Optimisation de <strong>Bases de données</strong></li>
+                        <li><strong>Tests</strong> unitaires</li>
+                        <li>Audit de <strong>Qualité</strong> de code</li>
+                        <li>Optimisation des <strong>Performances</strong></li>
+                        <li><strong>Formation</strong> aux utilisateurs</li>
+                        <li>Traitement de <strong>tickets</strong></li>
+                        <li><strong>Monitoring</strong> & <strong>Maintenance</strong> des applicatifs</li>
+                        <li><strong>Référencement</strong> (SEO)</li>
+                        <li>Analyse d'<strong>Audience</strong></li>
+                        <li>Installation <strong>WSL</strong></li>
+                        <li>Configuation de <strong>Containers</strong></li>
+                        <li><strong>CI/CD</strong></li>
+                        <li><strong>Versionning</strong> des applicatifs</li>
+                        <li>Gestion d'<strong>Hébergement</strong></li>
+                        <li><strong>Veille</strong> technologique</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="medium p-t-05">J'ai réalisé...</h3>
+
+                    <?php foreach ($experiences as $key => $experience): ?>
+                        <article
+                            class="<?= $key !== 0 ? "border-top" : '' ?> <?= $key + 1 !== count($experiences) ? "p-b-05" : '' ?>">
+                            <header class=" d-flex p-t-1 justify-between">
+                                <h4 class="medium"><?= $experience['techno'] ?></h4>
+                                <p>{ <?= implode(' | ', $experience['stack']) ?> }</p>
                             </header>
-                            <p class="p-b-05">{ <i><?= $experience['description'] ?></i> }</p>
-                            <div class="d-flex">
-                                <ul>
-                                    <?php foreach ($experience['tasks'] as $task): ?>
-                                        <li><?= $task ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
+                            <?php foreach ($experience['projects'] as $project): ?>
+                                <div>
+                                    <div class="d-flex p-t-05">
+                                        <span><?= $project['years'] ?> |&#xA0;</span>
+                                        <h5 class="medium"><?= $project['title'] ?></h5>
+                                        <?php if (isset($project['link'])): ?>
+                                            <a href="https://<?= $project['link'] ?>">&#xA0;→ <?= $project['link'] ?></a>
+                                        <?php endif; ?>
+                                    </div>
+                                    <p>→ <i><?= $project['description'] ?></i></p>
+                                </div>
+                            <?php endforeach; ?>
+                            <?php if (isset($experience['tasks'])): ?>
+                                <div class="d-flex">
+                                    <ul class="p-t-1 d-flex wrap gap-h-15">
+                                        <?php foreach ($experience['tasks'] as $task): ?>
+                                            <li><?= $task ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                         </article>
                     <?php endforeach; ?>
                 </div>
 
-                <div>
-                    <h3 class="medium p-t-1 p-b-05">Je pratique...</h3>
-                    <ul class="d-flex wrap gap-h-15 marker-none">
-                        <li>Méthodologie <strong>Agile</strong></li>
-                        <li>Installation <strong>WSL</strong></li>
-                        <li>Configuation de <strong>containers d'applications</strong></li>
-                        <li><strong>Versionning</strong> des applicatifs</li>
-                        <li><strong>Tests</strong> unitaires</li>
-                        <li><strong>Audit</strong> de qualité de code</li>
-                        <li><strong>CI/CD</strong></li>
-                        <li><strong>Monitoring</strong> & <strong>Maintenance</strong> des applicatifs</li>
-                        <li><strong>Veille</strong> informationnelle</li>
-                    </ul>
-                </div>
             </section>
+
         </div>
 
         <footer class="d-flex">
